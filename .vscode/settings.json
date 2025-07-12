@@ -1,0 +1,26 @@
+{
+  // Editor
+  "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.rulers": [80, 120],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+
+  // Workbench
+  "workbench.editor.labelFormat": "short",
+
+  // Explorer
+  "explorer.compactFolders": false,
+
+  // Terminal
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorBlinking": true,
+
+  // Files
+  "files.autoSave": "off",
+
+  // JAVA
+  "java.project.sourcePaths": ["src"],
+  "java.project.outputPath": "bin",
+  "java.project.referencedLibraries": ["lib/**/*.jar"]
+}
