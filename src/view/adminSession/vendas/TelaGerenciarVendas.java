@@ -30,28 +30,19 @@ public class TelaGerenciarVendas extends JFrame {
     JPanel painelCentro = new JPanel(new GridLayout(2, 1, 0, 40));
     painelCentro.setBorder(BorderFactory.createEmptyBorder(100, 440, 100, 440));
 
-    JButton btnCriarVenda = criarBotao("Criar Venda");
     JButton btnAtualizarVendas = criarBotao("Atualizar Venda");
 
-    btnCriarVenda.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        // Lógica para criar nova venda
-        // Exemplo: new TelaCriarVenda(factory).setVisible(true);
-        dispose();
-      }
-    });
 
     btnAtualizarVendas.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
         // Lógica para atualizar vendas
-        // Exemplo: new TelaAtualizarVendas(factory).setVisible(true);
+        new TelaAtualizarVendas(factory).setVisible(true);
         dispose();
       }
     });
 
-    painelCentro.add(btnCriarVenda);
+
     painelCentro.add(btnAtualizarVendas);
     add(painelCentro, BorderLayout.CENTER);
 

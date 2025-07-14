@@ -115,6 +115,11 @@ public class SaleRepository {
     }
   }
 
+  public repositories.item.Item[] findItemsBySaleId(int saleId) {
+    return itemsRepository.findBySaleId(saleId);
+  }
+
+
   public Sale[] findMany() {
     String sql = "SELECT * FROM sales";
     List<Sale> sales = new ArrayList<>();

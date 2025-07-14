@@ -3,6 +3,7 @@ package repositories;
 import java.sql.*;
 
 import io.github.cdimascio.dotenv.Dotenv;
+import repositories.item.ItemsRepository;
 import repositories.product.ProductRepository;
 import repositories.sale.SaleRepository;
 import repositories.user.UserRepository;
@@ -13,6 +14,7 @@ public class ConnectionFactory implements AutoCloseable {
   public final UserRepository user;
   public final ProductRepository product;
   public final SaleRepository sale;
+  public final ItemsRepository item;
 
   public ConnectionFactory(String database) {
     Dotenv dotenv = Dotenv.load();
@@ -43,6 +45,7 @@ public class ConnectionFactory implements AutoCloseable {
     this.user = new UserRepository(this.conn);
     this.product = new ProductRepository(this.conn);
     this.sale = new SaleRepository(this.conn);
+    this.item = new ItemsRepository(this.conn);
   }
 
   @Override
