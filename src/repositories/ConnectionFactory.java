@@ -54,4 +54,8 @@ public class ConnectionFactory implements AutoCloseable {
         "Não foi possível encerrar a conexão: ", err);
     }
   }
+  public Connection getConnection() {
+    return this.conn;
+  }
+
 }
